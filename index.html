@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TV Masjid Nurul Huda</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="bg"></div>
+
+<!-- HEADER -->
+<div class="header">
+    <div class="header-left">
+      <img class="img" src="assets/logo masjid.png" alt="Logo Masjid">
+    
+      <div class="header-text">
+        <b class="nama-masjid">Masjid Nurul Huda</b>
+        <span class="alamat">Sukanegara, Kab. Bogor, Jawa Barat</span>
+      </div>
+    </div>
+
+    <div class="header-right">
+    <div id="jam">00:00:00</div>
+
+    <div id="tanggal-masehi">
+        <span id="hari"></span>,
+        <span id="tanggal"></span>
+    </div>
+
+    <div id="tanggal-hijri"></div>
+    </div>
+</div>
+
+<!-- RAMADHAN -->
+<div class="ramadhan">
+    <b id="ramadhan">0</b> Hari Menuju Bulan Suci Ramadhan
+</div>
+
+<!-- JADWAL SHOLAT -->
+<div class="jadwal">
+    <div><span>Subuh</span><b id="fajr"></b></div>
+    <div><span>Syuruq</span><b id="sunrise"></b></div>
+    <div><span>Dzuhur</span><b id="dhuhr"></b></div>
+    <div><span>Ashar</span><b id="asr"></b></div>
+    <div><span>Maghrib</span><b id="maghrib"></b></div>
+    <div><span>Isya</span><b id="isha"></b></div>
+</div>
+
+<!-- NEXT SHOLAT -->
+<div class="next-sholat">
+    <span id="nextName"></span>
+    <span class="divider">|</span>
+    <span id="nextTime"></span>
+</div>
+
+<!-- MARQUEE -->
+<div class="marquee">
+    <marquee>
+        Selamat datang di Masjid Nurul Huda — Mari makmurkan masjid dengan sholat berjamaah
+    </marquee>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

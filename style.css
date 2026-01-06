@@ -1,0 +1,339 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,body{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    font-family:Arial, sans-serif;
+    color:white;
+}
+
+.bg{
+    position:fixed;
+    inset:0;
+    background-size:cover;
+    background-position:center;
+    animation:bg 60s infinite;
+    z-index:-1;
+}
+
+@keyframes bg{
+    0%{background-image:url('assets/bg1.jpg')}
+    33%{background-image:url('assets/bg2.jpg')}
+    66%{background-image:url('assets/bg3.jpg')}
+    100%{background-image:url('assets/bg1.jpg')}
+}
+
+.header{
+    position:fixed;
+    font-family: inter;
+    top:0;
+    left: 12px;
+    right: 12px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:12px 24px;
+    background:rgb(61, 59, 59);
+    backdrop-filter:blur(6px);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.header-left {
+  display: flex;       
+  align-items: center; 
+  gap: 15px;           
+  padding: 10px;   
+  font-size: 18px;    
+}
+
+.img {
+  width: 100px;        
+  height: auto;
+}
+
+.header-left b {
+  display: block; 
+  font-size: 35px;   
+}
+
+.header-right{
+    padding: 10px;
+    text-align:right;
+}
+
+#jam{
+    font-family:'Orbitron', sans-serif;
+    border:2px solid #FF7A00; 
+    border-radius:8px;
+    padding:6px 14px;
+    font-size:25px;
+    font-weight:200;
+    color:#FF7A00;
+    letter-spacing:2px;
+}
+
+#tanggal-masehi{
+    font-size:19px;
+    font-weight:400;
+    margin-top:2px;
+}
+
+#tanggal-hijri{
+    font-size:19px;
+    margin-top:2px;
+    opacity:.85;
+}
+
+
+.ramadhan{
+    position:fixed;
+    font-family: inter;
+    bottom:200px;     
+    left: 0;      
+    background:rgba(45, 42, 42, 0.55);
+    backdrop-filter:blur(6px);
+    padding:8px 18px;
+    margin-right: 0px;
+    border-radius:0 12px 12px 0;
+    font-size:18px;
+    color:white;
+}
+
+.jadwal{
+    font-family: Inter;
+    position:fixed;
+    bottom:60px;
+    left:0;
+    width:100%;
+    display:flex;
+    gap:12px;
+    padding:0 24px;
+}
+
+.jadwal div{
+    flex:1;
+    background:rgb(61, 59, 59);
+    padding:12px 0;
+    border-radius:12px;
+    text-align:center;
+}
+
+.jadwal span{
+    display:block;
+    font-size:20px;
+    margin-bottom:10px;
+}
+
+.jadwal b{
+    display:inline-block;
+    padding:12px 24px;
+    background:rgb(61, 59, 59);
+    border:2px solid #FF7A00;
+    border-radius:8px;
+    font-family:'Orbitron', sans-serif;
+    font-size:26px;
+    color:#FF7A00;
+}
+
+.next-sholat{
+    font-family: inter;
+    position:fixed;
+    bottom:200px;
+    right:0;
+    background:#FF7A00;
+    color:white;
+    padding:12px 18px;
+    border-radius:12px 0 0 12px;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-size:16px;
+}
+
+.divider{
+    width: 2px;
+    align-self: stretch;
+    background: white;
+    opacity: .7;
+}
+
+#nextName{
+    font-size:18px;
+    font-weight:600;
+}
+
+#nextTime{
+    font-family:'Orbitron', sans-serif;
+    font-size:18px;
+    font-weight:600;
+}
+
+.marquee{
+    position:fixed;
+    bottom:0;
+    width:100%;
+    background:rgba(45, 42, 42, 0.55);
+    backdrop-filter:blur(6px);
+    padding:10px;
+    font-size:16px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  html, body {
+    display: flex !important;
+    flex-direction: column !important;
+    height: auto !important; 
+    min-height: 100vh;
+    overflow-y: auto !important; 
+    overflow-x: hidden !important; 
+    margin: 0;
+    padding: 0;
+  }
+
+  .header, .ramadhan, .next-sholat, .jadwal, .marquee {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+    width: auto !important;
+  }
+
+  .header { 
+    order: 1;
+    margin: 0 10px; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    padding: 10px; 
+    border-bottom: 0; 
+    border-radius: 20px; 
+    text-align: center;
+  }
+
+
+  .header-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .img { 
+    width: 55px; 
+    margin-bottom: 2px;
+  }
+
+  .header-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nama-masjid { 
+    font-size: 14px; 
+    font-weight: bold;
+    display: block;
+    font-family: 'Arial', sans-serif; 
+  }
+
+  .alamat { 
+    font-size: 16px; 
+    font-style: italic;
+    opacity: 0.8;
+    display: block;
+    font-family: 'Arial', sans-serif;
+  }
+
+  .header-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  #jam { 
+    font-size: 22px;
+    font-weight: bold; 
+    margin: 2px 0;
+    padding: 4px 20px;
+    border: 1.5px solid #FF7A00; 
+    border-radius: 10px;
+    color: #FF7A00;
+    font-family: 'Orbitron', monospace; 
+  }
+
+  #tanggal-masehi, #tanggal-hijri {
+    font-size: 16px;
+    font-family: 'Arial', sans-serif; 
+  }
+
+  .ramadhan { 
+    order: 2; 
+    margin: 150px 10px 0 ; 
+    padding: 15px; 
+    text-align: center; 
+    border-radius: 12px;
+    display: block; 
+  }
+
+  .ramadhan b { 
+    font-size: 20px; 
+    display: inline-block; 
+  }
+
+  .next-sholat { 
+    order: 3; 
+    margin: 10px auto !important; 
+    padding: 10px 20px; 
+    text-align: center; 
+    font-size: 14px; 
+    border-radius: 10px;
+    width: fit-content !important; 
+    max-width: 80%;
+  }
+
+  .jadwal {
+    order: 4; 
+    margin: 10px;
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px;
+    padding: 14px;
+    border-radius: 12px;
+  }
+
+  .jadwal > div { 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    padding: 15px 5px; 
+    border-radius: 10px; 
+    min-height: 75px; 
+  }
+
+  .jadwal b { 
+    font-size: 18px; 
+  }
+
+  .marquee{
+    order: 5; 
+    position:fixed;
+    background:rgba(45, 42, 42, 0.55);
+    backdrop-filter:blur(6px);
+    padding:14px;
+    font-size:15px;
+    bottom: 0 !important;    
+    left: 0 !important;    
+    right: 0 !important;     
+    width: 100vw !important; 
+    margin: 0 !important;  
+}
+} 
